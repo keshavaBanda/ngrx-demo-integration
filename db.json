@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "username": "Keshava",
+      "email": "keshava@gmail.com",
+      "role": "tech",
+      "id": "FGzqViuIq9A"
+    },
+    {
+      "username": "Test",
+      "email": "test@gmail.com",
+      "role": "id",
+      "id": "TwCsG19itao"
+    },
+    {
+      "username": "Demo",
+      "email": "demo@gmail.com",
+      "role": "gd",
+      "id": "N_wN39bFKes"
+    },
+    {
+      "username": "Test2",
+      "email": "test2@gmail.com",
+      "role": "qa",
+      "id": "yBo0QYPQ03g"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

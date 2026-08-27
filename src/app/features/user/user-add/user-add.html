@@ -1,0 +1,84 @@
+<div class="user-add-container">
+
+  <div class="form-card">
+
+    <div class="form-header">
+      <div>
+        <h2>
+          {{ isEditMode ? 'Edit User' : 'Add User' }}
+        </h2>
+        <p> {{ isEditMode ? 'Edit the existing user' : 'Create a new user' }}</p>
+      </div>
+    </div>
+
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+      <!-- Username -->
+      <div class="form-group">
+        <label for="username">Username</label>
+
+        <input id="username" type="text" formControlName="username" placeholder="Enter username" appNoLeadingSpace />
+
+        @if (
+        userForm.controls.username.touched &&
+        userForm.controls.username.hasError('required')
+        ) {
+        <small>Username is required</small>
+        }
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email</label>
+
+        <input id="email" type="email" formControlName="email" placeholder="Enter email" appNoLeadingSpace />
+
+        @if (
+        userForm.controls.email.touched &&
+        userForm.controls.email.hasError('required')
+        ) {
+        <small>Email is required</small>
+        }
+
+        @if (
+        userForm.controls.email.touched &&
+        userForm.controls.email.hasError('email')
+        ) {
+        <small>Enter a valid email address</small>
+        }
+
+        @if (userForm.get('email')?.hasError('duplicateEmail')) {
+        <small class="text-danger">
+          This email already exists.
+        </small>
+        }
+      </div>
+
+      <!-- Role -->
+      <div class="form-group">
+        <label for="role">Role</label>
+
+        <select id="role" formControlName="role">
+          <option value="tech">Tech</option>
+          <option value="qa">QA</option>
+          <option value="id">Id</option>
+          <option value="gd">GD</option>
+        </select>
+      </div>
+
+      <!-- Actions -->
+      <div class="form-actions">
+        <button type="button" matButton (click)="onCancel()">
+          Cancel
+        </button>
+
+        <button matButton="filled" color="primary" type="submit">
+          {{ isEditMode ? 'Update User' : 'Add User' }}
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>

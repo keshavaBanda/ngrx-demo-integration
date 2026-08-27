@@ -1,0 +1,63 @@
+.dashboard-container {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.stats-section {
+  width: 260px; // Fixed width on the left
+  flex-shrink: 0;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  }
+
+  .card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background-color: #eff6ff;
+    color: #2563eb;
+  }
+
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    .card-title {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #64748b;
+    }
+
+    .card-count {
+      margin: 4px 0 0 0;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1;
+    }
+  }
+}
+
+.main-content {
+  flex-grow: 1;
+}
