@@ -23,6 +23,24 @@
       "email": "test2@gmail.com",
       "role": "qa",
       "id": "yBo0QYPQ03g"
+    },
+    {
+      "username": "Keshava2",
+      "email": "keshava2@gmail.com",
+      "role": "tech",
+      "id": "TRYJ5KZ-bw0"
+    },
+    {
+      "username": "Shiva",
+      "email": "shiva@gmail.com",
+      "role": "qa",
+      "id": "wFVdC_GrnCY"
+    },
+    {
+      "username": "Vyshnavi Chaithu",
+      "email": "vyshanavi@gmail.com",
+      "role": "id",
+      "id": "kWyDCGFSYZk"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
