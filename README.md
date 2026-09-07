@@ -39,8 +39,13 @@ src/
 │   ├── core/
 │   │   └── guards/
 │   │       └── auth.guard.ts
+        └── models
+            └── user.model.ts
+        └── services
+            └── auth.service.ts
 │   │
 │   ├── features/
+        └── dashboard/
 │   │   ├── login/
 │   │   └── user/
 │   │       ├── user-list/
@@ -113,7 +118,7 @@ npm install
 Run the following command from the project root:
 
 ```bash
-json-server --watch src/db/db.json --port 3000
+npx json-server --watch src/db/db.json --port 3000
 ```
 
 The API will be available at:
@@ -142,7 +147,7 @@ http://localhost:4200
 | ----------- | ------ | ------------ |
 | Get Users   | GET    | `/users`     |
 | Get User    | GET    | `/users/:id` |
-| Add User    | POST   | `/users`     |
+| Add User    | POST   | `/user/add`     |
 | Update User | PUT    | `/users/:id` |
 | Delete User | DELETE | `/users/:id` |
 
